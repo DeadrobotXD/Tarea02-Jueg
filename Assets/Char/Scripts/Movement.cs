@@ -7,23 +7,37 @@ public class Movement : ScriptableObject
 {
     InputSystem_Actions CharInputSystem;
     public event Action OnJump;
+    public event Action<Vector2> OnMove;
+
 
     private void OnEnable()
     {
         CharInputSystem = new InputSystem_Actions();
         CharInputSystem.Player.Enable();
-        CharInputSystem.Player.Jump.started += Jump_started;
-        CharInputSystem.Player.Jump.canceled += Jump_canceled;
+        CharInputSystem.Player.Jump.started += Jump;
+        CharInputSystem.Player.Move.performed += Move;
+        CharInputSystem.Player.Move.canceled += Move;
         Debug.Log("Listo");
     }
-
-    private void Jump_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    void OnDisable()
     {
-        
+        CharInputSystem.Player.Move.performed -= Move;
+        CharInputSystem.Player.Move.canceled -= Move;
+        CharInputSystem.Player.Disable();
     }
 
-    private void Jump_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    void OnDestroy()
     {
-        Debug.Log("Jump");
+        CharInputSystem.Dispose();
+    }  
+
+    private void Jump(InputAction.CallbackContext ctx)
+    {
+        OnJump?.Invoke();
+    }
+
+    private void Move(InputAction.CallbackContext ctx)
+    {
+        OnMove?.Invoke(ctx.ReadValue<Vector2>());
     }
 }

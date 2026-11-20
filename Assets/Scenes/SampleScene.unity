@@ -680,12 +680,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597565483}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04035616, y: 1.4671793, z: -0.0052609444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04035616, y: 1.3472728, z: -0.0052609444}
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840530557}
+  m_Father: {fileID: 2082173950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
@@ -766,7 +766,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2082173950}
-  - {fileID: 597565484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852119559
@@ -991,7 +990,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a85d10331f371fb8b9a8eac2edf224a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: edb6534be7d61aaf6b11f1bbab00cbca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 597565484}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: edb6534be7d61aaf6b11f1bbab00cbca, type: 3}
       insertIndex: -1
@@ -1105,10 +1107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1357264dccff7b46a86ad8d24eb0f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharControl
-  Speed: 0
-  MoveHor: 0
-  gravity: -3
-  MoveVer: 0
+  Speed: 5
+  Movement: {fileID: 11400000, guid: 29a2611493db368efa42f758147154f2, type: 2}
+  Camera: {fileID: 330585546}
+  moveDir: {x: 0, y: 0, z: 0}
+  moveInput: {x: 0, y: 0, z: 0}
   verticalVelocity: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
