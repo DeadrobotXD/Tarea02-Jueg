@@ -1,13 +1,38 @@
 fileFormatVersion: 2
-guid: 2228bc91c3e564a47a9fcba6ee2c05fe
+guid: 75991e759737fda4c952c541b9c36d48
 ModelImporter:
-  serializedVersion: 24200
+  serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light
+    second: {fileID: 2100000, guid: 08b9f54bed367d94c97fdd4f491428e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Panel_Grill
+    second: {fileID: 2100000, guid: 0132a3088b96583458b7f2bdf14df389, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Panel_Metal
+    second: {fileID: 2100000, guid: 032a0ca9e9e49dd4db6d0b2faceabb59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Street_Light_A
+    second: {fileID: 2100000, guid: e7a6e63395425e44e9788650a9bce9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Street_Light_Glass
+    second: {fileID: 2100000, guid: 5b15644d18c49694fa5155561bb69952, type: 2}
   materials:
-    materialImportMode: 2
-    materialName: 0
-    materialSearch: 1
+    materialImportMode: 1
+    materialName: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -16,6 +41,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -30,7 +57,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -56,9 +83,6 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    generateMeshLods: 0
-    meshLodGenerationFlags: 0
-    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -79,7 +103,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -98,7 +122,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
@@ -108,3 +132,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 309482
+  packageName: Street Lights Pack 01
+  packageVersion: 1.0
+  assetPath: Assets/Sat Productions/G-01/Street Lights Pack 01/Mesh/Street_Light_A_10.fbx
+  uploadId: 728771
