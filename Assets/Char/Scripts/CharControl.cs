@@ -12,6 +12,8 @@ public class CharControl : MonoBehaviour
     [SerializeField] private float JumpValue;
     [SerializeField] private Movement Movement;
     [SerializeField] private Transform Camera;
+    [SerializeField] private float fallDelay = 5f;
+    float airtime;
     private Animator anim;
     [SerializeField] private Vector3 moveDir;
     [SerializeField] private Vector3 moveInput;
@@ -42,7 +44,15 @@ public class CharControl : MonoBehaviour
             Rotation();
         }
         bool isGrounded = Grounded();
-        anim.SetBool("Grounded", isGrounded);
+        if (isGrounded) {
+            airtime = 0f;
+        }
+        else {
+            airtime += Time.deltaTime;
+        }
+            
+        bool animGrounded = isGrounded || airtime < fallDelay;
+        anim.SetBool("Grounded", animGrounded);
         if(isGrounded && verticalSpeed.y < 0)
         {
             verticalSpeed.y = 0;
